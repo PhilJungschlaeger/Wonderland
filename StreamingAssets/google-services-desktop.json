@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "175843730393",
+    "firebase_url": "https://alice-54286-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "alice-54286",
+    "storage_bucket": "alice-54286.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175843730393:ios:1e056330cfccc2ff8a6fc8",
+        "android_client_info": {
+          "package_name": "com.minuseins.alice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175843730393-02edp4iokuqeimo87f2mh44ot5t0v5ju.apps.googleusercontent.com"
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB27mlfWMq6b5C8jPHA5-rwvwRwgNusQg0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
