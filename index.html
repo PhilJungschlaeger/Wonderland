@@ -6,43 +6,43 @@
     <title>Unity WebGL Player | wonderland</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" tabindex="-1" style="background: #231F20"></canvas>
+    <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
     <script src="Build/Webbuild.loader.js"></script>
     <script>
-      var canvas = document.querySelector("#unity-canvas");
-      var unityInstance;
-
+       function adjustCanvasSize() {
+        var canvas = document.querySelector("#unity-canvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      adjustCanvasSize();
+      window.addEventListener('resize', adjustCanvasSize);
+      
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
         var meta = document.createElement('meta');
         meta.name = 'viewport';
-        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
 
-        canvas.style.width = window.innerWidth + "px";
-        canvas.style.height = window.innerHeight + "px";
+        var canvas = document.querySelector("#unity-canvas");
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
         canvas.style.position = "fixed";
-        canvas.style.left = "0";
-        canvas.style.top = "0";
-        document.body.style.overflow = "hidden"; // Prevent scrolling
 
-      } else {
-        // Desktop device style: set fixed canvas size
-        canvas.width = 960;
-        canvas.height = 600;        
+        document.body.style.textAlign = "left";
       }
-      
-      unityInstance = createUnityInstance(canvas, {
-          dataUrl: "Build/Webbuild.data.unityweb",
-          frameworkUrl: "Build/Webbuild.framework.js.unityweb",
-          codeUrl: "Build/Webbuild.wasm.unityweb",
-          streamingAssetsUrl: "StreamingAssets",
-          companyName: "minuseins",
-          productName: "wonderland",
-          productVersion: "0.1",
-          //matchWebGLToCanvasSize: true, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-          // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-        });
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Webbuild.data.unityweb",
+        frameworkUrl: "Build/Webbuild.framework.js.unityweb",
+        codeUrl: "Build/Webbuild.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "minuseins",
+        productName: "wonderland",
+        productVersion: "0.1",
+        //matchWebGLToCanvasSize: true, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
     </script>
   </body>
 </html>
