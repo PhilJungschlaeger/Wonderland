@@ -1,4 +1,4 @@
-const cacheName = "minuseins-wonderland-0.1";
+const cacheName = "minuseins-wonderland-0.3";
 const contentToCache = [
     "Build/WebBuild.loader.js",
     "Build/WebBuild.framework.js.unityweb",
