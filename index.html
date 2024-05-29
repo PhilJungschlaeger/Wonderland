@@ -65,22 +65,8 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "minuseins",
         productName: "wonderland",
-        productVersion: "0.1",
+        productVersion: "0.98",
         showBanner: unityShowBanner,
-        cacheControl: function (url) {
-          // Enable revalidation for .data and .bundle files
-          if (url.match(/\.data/) || url.match(/\.bundle/)) {
-            return "must-revalidate";
-          }
-
-          // Load .mp4 and .custom files from cache without revalidation
-          if (url.match(/\.mp4/) || url.match(/\.custom/)) {
-            return "immutable";
-          }
-
-          // Disable caching for other files
-          return "no-store";
-        },
       };
 
       // By default Unity keeps WebGL canvas render target size matched with
