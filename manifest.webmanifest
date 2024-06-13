@@ -3,7 +3,7 @@
     "short_name": "wonderland",
     "start_url": "index.html",
     "display": "fullscreen",
-    "background_color": "#FFFFFF",
+    "background_color": "#231F20",
     "theme_color": "#000",
     "description": "Nonlinear Storytelling",
     "icons": [{
