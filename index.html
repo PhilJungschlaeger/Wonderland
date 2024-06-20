@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WebGzip.loader.js";
+      var loaderUrl = buildUrl + "/WebBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/WebGzip.data.unityweb",
-        frameworkUrl: buildUrl + "/WebGzip.framework.js.unityweb",
-        codeUrl: buildUrl + "/WebGzip.wasm.unityweb",
+        dataUrl: buildUrl + "/WebBuild.data.unityweb",
+        frameworkUrl: buildUrl + "/WebBuild.framework.js.unityweb",
+        codeUrl: buildUrl + "/WebBuild.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "minuseins",
         productName: "wonderland",
@@ -84,7 +84,7 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
       }
 
-      canvas.style.background = "url('" + buildUrl + "/WebGzip.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/WebBuild.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
